@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "ts-node-dev --ignore node_modules src/server.ts",
+        "dev": "ts-node-dev --ignore-watch node_modules src/server.ts",
         "knex:seed": "knex --knexfile knexfile.ts seed:run",
         "knex:migrate": "knex --knexfile knexfile.ts migrate:latest"
     },
@@ -12,6 +12,8 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@types/cors": "^2.8.7",
+        "cors": "^2.8.5",
         "express": "^4.17.1",
         "knex": "^0.21.6",
         "sqlite": "^4.0.15",
